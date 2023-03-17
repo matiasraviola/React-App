@@ -20,13 +20,15 @@ function BookShow({book, onDelete, onEdit}){
         content= <BookEdit onSubmit={handleSubmit} book={book}/>
     }
 
-    return <div className="book-show">
+    return( <div className="book-show">
+        <img alt="books" src={`https://picsum.photos/seed/${book.id}/300/200`} />
+"
         <div>{content}</div>
         <div className="actions">
             <button className="edit" onClick={handleEditClick}> Edit</button>
             <butoon className="delete" onClick={handleDeleteClick}>Delete</butoon>
         </div>
-    </div>
+    </div>)
 }
 
 export default BookShow
